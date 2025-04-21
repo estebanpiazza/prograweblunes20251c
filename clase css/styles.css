@@ -1,0 +1,129 @@
+*{ /* all */
+    border: 1px solid red;
+}
+
+
+
+
+/* 
+CSS: Animaciones, boostrap / CSS: Queries y pseudoselectores, flexbox, grid
+*/
+#elementoEspecial{color:green}
+/* selector { propiedad : valor ; }*/
+/* tag */
+body{background-color: grey;}
+/* id > # */
+#titularPrincipal{ font-family: monospace; }
+/* class > . */
+.elementoLista{
+    color: blue;
+}
+
+/*  CSS Cascade Style Sheet */
+
+.elementoLista{
+    color: red;
+    font-size: 30px;
+}
+#elementoEspecial{color:yellow}
+
+.tamanioGrande{font-size: 30px;}
+
+
+
+
+/* unvisited link */
+a:link {
+  color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+  color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+}
+/* ********************** */
+
+/* viewport  */
+@media screen and (max-width: 480px) {
+
+    body{
+    background-color: red;
+}
+
+.container {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: stretch;
+  }
+  
+  .header { grid-area: 1 / 1 / 2 / 2; }
+  
+  .colizq { grid-area: 2 / 1 / 3 / 2; }
+  
+  .footer { grid-area: 4 / 1 / 5 / 2; }
+  
+  .colizq2 { grid-area: 3 / 1 / 4 / 2; }
+  
+  .col1 { grid-area: 2 / 1 / 3 / 2; }
+  
+  .col2 { grid-area: 3 / 1 / 4 / 2; }
+  
+
+
+
+
+
+
+
+}
+@media screen and (min-width: 1000px) {
+    body{
+    background-color: blue;
+}
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: stretch;
+    grid-template-areas:
+      "header header"
+      "colizq colder"
+      "colizq2 colder2"
+      "footer footer";
+  }
+  
+  .header { grid-area: header; 
+background-color: green;}
+
+  .header:hover{background-color: black;}
+
+  .colizq { grid-area: colizq; }
+  
+  .colder { grid-area: colder; }
+  
+  .footer { grid-area: footer; }
+  
+  .colizq2 { grid-area: colizq2; }
+  
+  .colder2 { grid-area: colder2; }
+  
+
+
+
+}
